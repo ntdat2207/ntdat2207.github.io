@@ -1276,3 +1276,97 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.chat-box {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+.chat-message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.from-me {
+    background-color: #0d6efd;
+    color: white;
+    margin-left: auto;
+    text-align: right;
+}
+.from-them {
+    background-color: #e9ecef;
+    color: black;
+    margin-right: auto;
+}
+
+#loading {
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.loader {
+    width: 106px;
+    height: 56px;
+    display: block;
+    background-image: linear-gradient(#FFF 50px, transparent 0), linear-gradient(#FFF 50px, transparent 0), linear-gradient(#FFF 50px, transparent 0), linear-gradient(#FFF 50px, transparent 0), radial-gradient(circle 14px, #FFF 100%, transparent 0);
+    background-size: 48px 15px , 15px 35px, 15px 35px, 25px 15px, 28px 28px;
+    background-position: 25px 5px, 58px 20px, 25px 17px, 2px 37px, 76px 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+.loader::after,
+.loader::before {
+    content: '';
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 6px solid #FFF;
+    border-radius: 50%;
+    left: -45px;
+    top: -10px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#FFF 64px, transparent 0), linear-gradient(#FFF 66px, transparent 0), radial-gradient(circle 4px, #FFF 100%, transparent 0);
+    background-size: 40px 1px , 1px 40px, 8px 8px;
+    background-position: center center;
+    box-sizing: border-box;
+    animation: rotation 0.3s linear infinite;
+}
+.loader::before {
+    left: 25px;
+    top: 60px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.no-resize {
+    resize: none;
+}
+
+#chat-container {
+    max-height: 500px;
+}
+
+.mh-inherit {
+    max-height: inherit;
+}
