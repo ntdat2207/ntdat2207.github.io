@@ -238,9 +238,9 @@
     return age;
   }
 
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const age = calculateAge("1992-07-22"); // thay bằng ngày sinh thật của bạn
-  //   document.getElementById("age").textContent = age;
-  // });
+  document.addEventListener("DOMContentLoaded", function () {
+    const age = calculateAge("1992-07-22"); // thay bằng ngày sinh thật của bạn
+    document.getElementById("age").textContent = age;
+  });
 
 })();
